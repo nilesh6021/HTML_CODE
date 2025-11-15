@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XProfile - My Virtual Profile Card</title>
+     <style>
+           *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body{
+                 background-image: url(../HTML_CODE/image/cityView.jpg);
+                background-size: cover;
+                background-repeat:no-repeat;
+                height:100vh;
+                font-family: Arial, sans-serif;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .profile-box{
+                height:400px;
+                width:350px;
+                background-color: #ff574a;
+                color: #fff;
+                font-size: 12PX;
+                border-radius: 20px;
+                padding: 40px 90px;
+                text-align: center;
+            
+                
+            }
+
+            .top-icons{
+                display: flex;
+                justify-content: space-between;
+                margin-left: -50px;
+                margin-right: -50px;
+                margin-bottom: 10px;
+                color: #fff;
+            }
+
+            .menu-icon,
+            .setting-icon {
+            width: 35px;
+            cursor: pointer;
+            color: #fff;
+            }
+
+            .profile-pic {
+                border-radius: 80%;
+                width: 140px;
+                padding: 6px;
+                background-color: #fff;
+                margin: 10px;
+
+            }
+
+            .social-media{
+                margin-top: 20px;
+            }
+            .social-media img {
+                width: 20px;
+                margin: 10px;
+                cursor: pointer;
+            }
+    </style>
+</head>
+<body>
+    <div class="profile-box">
+        <div class="top-icons">
+            <img src="../HTML_CODE/image/bar-chart-horizontal-line.png" class="setting-icon" />
+            <img src="../HTML_CODE/image/settings-5-line.png" class="menu-icon" />              
+        </div>
+        
+    
+        <img src="../HTML_CODE/image/7ae28c97-cb1f-4d1d-b74c-4db76b2081ad.jpg" alt="profile" class="profile-pic" />
+
+        <h3>Learner Beaver</h3>
+
+        <p>Frontend Dev at CrioDo, Bengaluru</p>
+
+        <div class="social-media">
+            <img src="../HTML_CODE/image/instagram-fill.png" />
+            <img src="../HTML_CODE/image/github-fill.png" />
+            <img src="../HTML_CODE/image/mail-unread-line.png" />
+            <img src="../HTML_CODE/image/twitter-fill.png" />
+
+        </div>
+    </div>
+</body>
+</html>

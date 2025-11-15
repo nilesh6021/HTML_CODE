@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nave bar</title>
+    <style>
+         *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body{
+                background-image: url(../HTML_CODE/image/cityView.jpg);
+                background-size: cover;
+                background-repeat:no-repeat;
+                height:100vh;
+                font-family: Arial, sans-serif;
+
+               
+                
+            }
+            nav{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 20px 50px;
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+            .nav-links{
+                list-style: none;
+                display: flex;
+                justify-content: space-around;
+                width: 20%;
+            }
+            .logo h2{
+                color: #fff;
+            }
+            nav ul li a{
+                color: #fff;
+                text-decoration: none;
+                font-size: 18px;
+                transition: color 0.3s;
+            }
+            .contenar{
+                width: 100%;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            
+            }
+            .contenar h1{
+                color: #fff;
+                font-size: 48px;
+                padding: 20px;
+                border-radius: 10px;
+            }
+           
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <h2>XProfile</h2>
+        </div>
+    
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Logout</a></li>
+        </ul>
+    </nav>
+    <div class="contenar">
+        <h1>Welcome</h1>
+    </div>
+    <!-- <div class="contenar">
+
+
+    </div> -->
+    
+</body>
+</html>
