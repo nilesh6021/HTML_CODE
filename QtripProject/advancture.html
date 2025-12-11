@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>QTrip — Cities Grid</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Your styles -->
+  <style>
+    /* Reset small spacing issues */
+    * { box-sizing: border-box; }
+
+    body {
+      background: #fff;
+      padding: 30px 20px;
+    }
+
+    /* ---------- CARD LAYOUT ---------- */
+    /* Use a card wrapper class for the overlay + effects */
+    .overlay-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      background: #000;
+      display: block;
+      width: 100%;
+      /* Make cards keep same aspect ratio across breakpoints */
+      aspect-ratio: 4 / 5;         /* modern browsers */
+      height: auto;
+      transition: transform .3s ease;
+    }
+
+    /* Fallback height for browsers that don't support aspect-ratio */
+    @supports not (aspect-ratio: 1 / 1) {
+      .overlay-card {
+        height: 320px;           /* fallback fixed height */
+      }
+    }
+
+    /* Image fills the card area */
+    .overlay-card img {
+      position: absolute;
+      inset: 0;                  /* top:0; right:0; bottom:0; left:0; */
+      width: 100%;
+      height: 100%;
+      object-fit: cover;         /* crop centrally without stretch */
+      transition: transform .45s ease, filter .45s ease;
+      display: block;
+    }
+
+    /* Darken and zoom on hover */
+    .overlay-card:hover img,
+    .overlay-card:focus-within img {
+      transform: scale(1.08);
+      filter: brightness(60%);
+    }
+
+    /* Overlay text container (bottom-centered) */
+    .overlay-card .card-overlay-text {
+      position: absolute;
+      bottom: 18px;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      z-index: 3;
+      color: #fff;
+      padding: 0 12px;
+      width: calc(100% - 24px);
+      pointer-events: none; /* allow clicks to go through to the link */
+      text-shadow: 0 3px 8px rgba(0,0,0,0.6);
+    }
+
+    .overlay-card .card-overlay-text h5 {
+      margin: 0;
+      font-weight: 700;
+      font-size: 1.05rem;
+      letter-spacing: .6px;
+      text-transform: capitalize;
+    }
+
+    .overlay-card .card-overlay-text p {
+      margin: 6px 0 0;
+      font-size: .9rem;
+      opacity: .95;
+    }
+
+    /* Make the anchor cover the full card area (for accessibility + full click) */
+    .tile-link {
+      display: block;
+      height: 100%;
+      width: 100%;
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* spacing between cards */
+    .card-col {
+      padding: .6rem;
+    }
+
+    /* responsive tweaks */
+    @media (max-width: 576px) {
+      .overlay-card { aspect-ratio: 3 / 4; } /* a bit taller on small screens */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="row g-0"> <!-- we'll manage padding in .card-col -->
+      <!-- Example: 8 cards -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 card-col">
+        <a class="tile-link" href="./pages/adventures/index.html" aria-label="Bengaluru">
+          <div class="overlay-card">
+            <img src="./assets/bengaluru.jpg" alt="Bengaluru">
+            <div class="card-overlay-text">
+              <h5>Bengaluru</h5>
+              <p>105+ places</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 card-col">
+        <a class="tile-link" href="#" aria-label="Kolkata">
+          <div class="overlay-card">
+            <img src="./assets/kolkata.jpg" alt="Kolkata">
+            <div class="card-overlay-text">
+              <h5>Kolkata</h5>
+              <p>100+ places</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 card-col">
+        <a class="tile-link" href="#" aria-label="Goa">
+          <div class="overlay-card">
+            <img src="./assets/goa.jpg" alt="Goa">
+            <div class="card-overlay-text">
+              <h5>Goa</h5>
+              <p>150+ places</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 card-col">
+        <a class="tile-link" href="#" aria-label="Mumbai">
+          <div class="overlay-card">
+            <img src="./assets/mumbai.jpg" alt="Mumbai">
+            <div class="card-overlay-text">
+              <h5>Mumbai</h5>
+              <p>235+ places</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- row 2 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 card-col">
+        <a class="tile-link" href="#" aria-label="Singapore">
+          <div class="overlay-card">
+            <img src="./assets/singapore.jpg" alt="Singapore">
+            <div class="card-overlay-text">
+              <h5>Singapore</h5>
+              <p>106+ places</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 card-col">
+        <a class="tile-link" href="#" aria-label="Dubai">
+          <div class="overlay-card">
+            <img src="./assets/dubai.jpg" alt="Dubai">
+            <div class="card-overlay-text">
+              <h5>Dubai</h5>
+              <p>100+ places</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 card-col">
+        <a class="tile-link" href="#" aria-label="Malaysia">
+          <div class="overlay-card">
+            <img src="./assets/malaysia.jpg" alt="Malaysia">
+            <div class="card-overlay-text">
+              <h5>Malaysia</h5>
+              <p>110+ places</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 card-col">
+        <a class="tile-link" href="#" aria-label="Paris">
+          <div class="overlay-card">
+            <img src="./assets/paris.jpg" alt="Paris">
+            <div class="card-overlay-text">
+              <h5>Paris</h5>
+              <p>110+ places</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

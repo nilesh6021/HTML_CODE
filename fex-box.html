@@ -6,52 +6,52 @@
     <title>fex-box</title>
     <style>
         *{
-    margin: 0;
-    padding: 0; 
-    box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+    
         }
-        .fex{
+        .parent{
+           display: flex;
+           justify-content: space-around    ;
+           border :10px solid black;
+    
+           
+        }
+        .chaild1, .chaild2, .chaild3, .chaild4, .chaild5{
+            border: 2px solid red;
+            height: 100px;
+            width: 100px;
+            margin: 10px;
+            float: left;
             text-align: center;
-            display: flex;
-            justify-content: center;
-            /* justify-content:baseline /center /end /space-between /space-around /space-evenly /stretch /flex-start /flex-end; */
-             
-
-
-            /* flex-direction: column /row /row-reverse
-            
-            
-            flex-wrap: wrap /nowrap /wrap-reverse; */
-            
-            
-         
-            
-            align-items: center;
-
-            background-color: lightgray;
-        
+            line-height: 100px;
+            font-size: 30px;
         }
-     
         
     </style>
 </head>
 <body>
-    <div class="fex">
-        <div style="background-color: red; height:100px; width:100px; margin:10px;">1</div>
-        <div style="background-color: blue; height:100px; width:100px; margin:10px;">2</div>
-        <div style="background-color: green; height:100px; width:100px; margin:10px;">3</div>
-        <div style="background-color: yellow; height:100px; width:100px; margin:10px;">4</div>
-        <div style="background-color: pink; height:100px; width:100px; margin:10px;">5</div>
+    <div class="parent">
+        <div class="chaild1">
+            <h1>1</h1>
+        </div>
+        <div class="chaild2">
+            <h1>1</h1>
+        </div>
+        <div class="chaild3">
+            <h1>1</h1>
+        </div>
+        <div class="chaild4">
+            <h1>1</h1>
+        </div>
+        <div class="chaild5">
+            <h1>1</h1>
+        </div>
+        
 
     </div>
 
-    <!-- <div  class="mainfex">
-        <ul class="mainBox">
-            <li class="box1"></li>
-            <li class="box2"></li>
-            <li class="box3"></li>
-            <li class="box4"></li>
-        </ul>
-    </div> -->
+  
 </body>
 </html>
