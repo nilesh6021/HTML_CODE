@@ -21,16 +21,27 @@
         margin: 0;
         padding: 0;     
     }
+    nav{
+        text-align: center;
+    }
     .navbar{
-        background-color: #f4f4f4;
+        background-color: #dab5b5;
         display: flex;
         justify-content: space-between;
         
     }
-    nav-item ul{
-        list-style: none;
+    .nav-item ul{
         display: flex;
-        margin-right: 20px;}
+        justify-content: space-between;
+        list-style: none;
+        
+    } 
+    .nav-item ul li a{
+        text-decoration: none;
+        color: #333;
+        padding: 14px 20px;
+        display: block;
+    }
     
 </style>
 <body>
@@ -40,7 +51,7 @@
                 <h1>XProfile</h1>
             </div>
             <div class="nav-item">
-                <ul >
+                <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Profile</a></li>
                     <li><a href="#">Settings</a></li>
